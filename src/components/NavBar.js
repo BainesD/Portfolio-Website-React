@@ -1,5 +1,6 @@
 import React from "react";
-import {Link} from "react-router-dom"
+import {NavLink} from "react-router-dom"
+import logo from "../images/apple-touch-icon.png"
 
 
 export default function NavBar() {
@@ -7,7 +8,7 @@ export default function NavBar() {
     <>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <a className="navbar-brand" href="#">
-          <img className="navbar-logo" src="./apple-touch-icon.png" />
+          <img className="navbar-logo" src={logo} />
           Baines A. Deal
         </a>
         <button
@@ -35,14 +36,9 @@ export default function NavBar() {
               </a>
             </li>
             <li className="nav-item">
-              <Link to="blog" className="nav-link">
+              <NavLink to="blog" className="nav-link">
                 Blog
-              </Link>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Link
-              </a>
+              </NavLink>
             </li>
           </ul>
         </div>

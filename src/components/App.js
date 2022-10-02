@@ -2,9 +2,10 @@ import React from "react";
 import NavBar from "./NavBar";
 import Home from "./Home";
 import {Route, Routes} from "react-router-dom"
-import Blog from "./Blog"
-import FullPost from "./FullPost";
+import Blog from "./blog/Blog"
+import FullPost from "./blog/FullPost";
 import postData from "../data/PostData";
+import Posts from "./blog/Posts";
 
 
 export default function App(){
@@ -15,7 +16,8 @@ export default function App(){
         <Routes>
             <Route path="/" element={<Home/>}/>
             <Route path="/blog" element={<Blog data={postData}/>}>
-                <Route path=":date" element={<FullPost data={postData}/>}></Route>
+                <Route path="" element={<Posts data={postData}/>}/>
+                <Route path=":postSlug" element={<FullPost data={postData}/>}/>
             </Route>
 
         </Routes>

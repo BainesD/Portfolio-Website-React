@@ -1,6 +1,8 @@
 import React from "react";
 import {useState} from "react"
-import Post from "./Post";
+import { Outlet } from "react-router-dom";
+import Posts from "./Posts";
+
 
 export default function Blog({data}){
     
@@ -9,8 +11,9 @@ export default function Blog({data}){
     <>
     <div className="blog">
         <div className="posts">
-            <Post data={data}/>
+            <Outlet/>
         </div>
+        
     </div>
     </>)
 }
