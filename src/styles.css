@@ -102,3 +102,81 @@ li {
 .information-body {
     text-indent: 30px;
 }
+
+.blog{
+  background-color: lightgray;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+.posts{
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.post{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 30px;
+  margin: 20px;
+  padding:10px;
+  background-color: white;
+  width:auto;
+  height: 20vh;
+  box-shadow: -4px 7px 5px 0px #969696;
+}
+
+.post-image{
+  box-shadow: -4px 7px 5px 0px #969696;
+  max-width: 80%;
+  margin: 10px;
+  border-radius: 4px;
+}
+
+.post-body{
+  max-height: 100%;
+  width:80%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  white-space: normal;
+  text-overflow: ellipsis;
+}
+
+.post-text{
+  flex-wrap: wrap;
+  overflow: hidden;
+  white-space: wrap;
+  text-overflow: ellipsis;
+  max-height: 100%;
+}
+
+.post-date{
+  color:#808080
+}
+
+@media only screen and (max-width:775px) {
+  .post-text{
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+  }
+}
+
+.container-post__image{
+display: flex;
+text-align: center;
+max-height: 100%;
+width: 20%;
+overflow: white;
+}
+
+@media only screen and (min-width:1100px){
+.posts{
+  display: grid;
+}
+
+}
